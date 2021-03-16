@@ -1,0 +1,869 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>FormControlComponent</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+    <link href="../../../styles/style.css" rel="Stylesheet">
+    <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+    <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+    <link href="../../../styles/main.css" rel="Stylesheet">
+    <script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+    <script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+    <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+    <script type="text/javascript" src="../../../scripts/main.js" async="async"></script>
+    <script>var pathToRoot = "../../../";</script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="logo"></div>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div id="leftToggler"><span class="icon-toggler"></span></div>
+        <div id="searchBar"></div>
+        <script type="text/javascript" src="../../../scripts/pages.js"></script>
+        <script type="text/javascript" src="../../../scripts/main.js"></script>
+        <div id="content" pageIds="dev.fritz2.components/FormControlComponent///PointingToDeclaration//-1994582172">
+          <div class="breadcrumbs"><a href="../../index.html">components</a>/<a href="../index.html">dev.fritz2.components</a>/<a href="index.html">FormControlComponent</a></div>
+          <div class="cover ">
+            <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector js-like" data-active="" data-filter=":components:dokkaHtml/jsMain">js</button></div>
+            <h1 class="cover"><span>Form</span><wbr></wbr><span>Control</span><wbr></wbr><span>Component</span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open class <a href="index.html">FormControlComponent</a> : <a href="../-component/index.html">Component</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&gt; , <a href="../-form-properties/index.html">FormProperties</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This component class manages the configuration of a <a href="../form-control.html">formControl</a> and some render centric functionalities. The former are important for clients of a <a href="../form-control.html">formControl</a>, the latter for extending or changing the default behaviors.</p><p class="paragraph">A <a href="../form-control.html">formControl</a> can be configured in different aspects:</p><ul><li><p class="paragraph">a label for a description of the control as a whole</p></li><li><p class="paragraph">mark the control as required</p></li><li><p class="paragraph">an optional helper text</p></li><li><p class="paragraph">provide a validation message as a Flow&lt;ComponentValidationMessage&gt;]; the severity is reflected by the default theme!</p></li><li><p class="paragraph">disable the control</p></li><li><p class="paragraph">provide a store to the control itself, with optional additional validation (<a href="../../dev.fritz2.components.validation/-with-validator/index.html">dev.fritz2.components.validation.WithValidator</a>) at best, in order to automatically apply model validation and get the results shown</p></li></ul><p class="paragraph">Customizing the control:</p><p class="paragraph">To add a new control, extend this class and add a new control function that wraps the desired control component factory function like <a href="input-field.html">FormControlComponent.inputField</a>, <a href="select-field.html">FormControlComponent.selectField</a>, <a href="checkbox.html">FormControlComponent.checkbox</a>, <a href="checkbox-group.html">FormControlComponent.checkboxGroup</a> and <a href="radio-group.html">FormControlComponent.radioGroup</a> do.</p><p class="paragraph">In order to simply change the target of some of the default control wrapping function to a different control component, extend this class and override the desired function. Be aware that you cannot provide default arguments for an overridden function, so you must offer a new function with default arguments that just directs to the overridden one.</p><p class="paragraph">Be aware of the render strategy - pick whether your control should be rendered as a single control or a group.</p><ul><li><p class="paragraph"><a href="../-single-control-renderer/index.html">SingleControlRenderer</a> for a control that consists of a single element</p></li><li><p class="paragraph"><a href="../-control-group-renderer/index.html">ControlGroupRenderer</a> for a control that consists of multiple parts (like checkBoxes etc.)</p></li></ul><p class="paragraph">If those do not fit, just implement the <a href="../-control-renderer/index.html">ControlRenderer</a> interface and pair it with the string based key of the related control wrapping function. Have a look at the init block, <span data-unresolved-link="dev.fritz2.components/FormControlComponent/renderStrategies/#/PointingToDeclaration/">renderStrategies</span> field and <a href="-control/assignee.html">Control.assignee</a> field to learn how the mapping between control and rendering strategy is done.</p></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+            <div class="tabs-section-body">
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FFormControlComponent%2F%23%2FPointingToDeclaration%2F%5D%2FConstructors%2F-1994582172" anchor-label="FormControlComponent" id="%5Bdev.fritz2.components%2FFormControlComponent%2FFormControlComponent%2F%23%2FPointingToDeclaration%2F%5D%2FConstructors%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex"><a href="-form-control-component.html">FormControlComponent</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FFormControlComponent%2F%23%2FPointingToDeclaration%2F%5D%2FConstructors%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">fun <a href="-form-control-component.html">FormControlComponent</a>()<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Types</h2>
+              <div class="table" data-togglable="Types"><a data-name="%5Bdev.fritz2.components%2FFormControlComponent.Companion%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172" anchor-label="Companion" id="%5Bdev.fritz2.components%2FFormControlComponent.Companion%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-companion/index.html">Companion</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent.Companion%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">object <a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent.Control%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172" anchor-label="Control" id="%5Bdev.fritz2.components%2FFormControlComponent.Control%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-control/index.html">Control</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent.Control%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">class <a href="-control/index.html">Control</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent.FormSizeContext%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172" anchor-label="FormSizeContext" id="%5Bdev.fritz2.components%2FFormControlComponent.FormSizeContext%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-form-size-context/index.html">FormSizeContext</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent.FormSizeContext%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">object <a href="-form-size-context/index.html">FormSizeContext</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent.ValidationResult%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172" anchor-label="ValidationResult" id="%5Bdev.fritz2.components%2FFormControlComponent.ValidationResult%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="-validation-result/index.html">ValidationResult</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent.ValidationResult%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">class <a href="-validation-result/index.html">ValidationResult</a>(messages: <span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../../dev.fritz2.components.validation/-component-validation-message/index.html#%5Bdev.fritz2.components.validation%2FComponentValidationMessage%2F%2F%2FPointingToDeclaration%2F%5D%2FExtensions%2F-1994582172">ComponentValidationMessage</a>&gt;&gt;?)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2Fcheckbox%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.styling.StyleClass%23dev.fritz2.binding.Store%5Bkotlin.Boolean%5D%3F%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.CheckboxComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="checkbox" id="%5Bdev.fritz2.components%2FFormControlComponent%2Fcheckbox%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.styling.StyleClass%23dev.fritz2.binding.Store%5Bkotlin.Boolean%5D%3F%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.CheckboxComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="checkbox.html">checkbox</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2Fcheckbox%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.styling.StyleClass%23dev.fritz2.binding.Store%5Bkotlin.Boolean%5D%3F%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.CheckboxComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open fun <a href="checkbox.html">checkbox</a>(styling: <span data-unresolved-link="dev.fritz2.styling.params/BasicParams///PointingToDeclaration/">BasicParams</span>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {}, baseClass: <span data-unresolved-link="dev.fritz2.styling/StyleClass///PointingToDeclaration/">StyleClass</span> = StyleClass.None, store: <span data-unresolved-link="dev.fritz2.binding/Store///PointingToDeclaration/">Store</span>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>&gt;? = null, id: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null, prefix: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> = ControlNames.checkbox, build: <a href="../-checkbox-component/index.html">CheckboxComponent</a>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {})<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FcheckboxGroup%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23kotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%23dev.fritz2.binding.Store%5Bkotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.CheckboxGroupComponent%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="checkboxGroup" id="%5Bdev.fritz2.components%2FFormControlComponent%2FcheckboxGroup%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23kotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%23dev.fritz2.binding.Store%5Bkotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.CheckboxGroupComponent%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="checkbox-group.html">checkboxGroup</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FcheckboxGroup%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23kotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%23dev.fritz2.binding.Store%5Bkotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.CheckboxGroupComponent%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open fun &lt;<a href="checkbox-group.html">T</a>&gt; <a href="checkbox-group.html">checkboxGroup</a>(styling: <span data-unresolved-link="dev.fritz2.styling.params/BasicParams///PointingToDeclaration/">BasicParams</span>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {}, items: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="checkbox-group.html">T</a>&gt;, store: <span data-unresolved-link="dev.fritz2.binding/Store///PointingToDeclaration/">Store</span>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="checkbox-group.html">T</a>&gt;&gt;? = null, baseClass: <span data-unresolved-link="dev.fritz2.styling/StyleClass///PointingToDeclaration/">StyleClass</span> = StyleClass.None, id: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null, prefix: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> = ControlNames.checkboxGroup, build: <a href="../-checkbox-group-component/index.html">CheckboxGroupComponent</a>&lt;<a href="checkbox-group.html">T</a>&gt;.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {})<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormProperties%2Fenabled%2F%23kotlin.Boolean%2FPointingToDeclaration%2F%2C+dev.fritz2.components%2FFormProperties%2Fenabled%2F%23kotlinx.coroutines.flow.Flow%5Bkotlin.Boolean%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="enabled" id="%5Bdev.fritz2.components%2FFormProperties%2Fenabled%2F%23kotlin.Boolean%2FPointingToDeclaration%2F%2C+dev.fritz2.components%2FFormProperties%2Fenabled%2F%23kotlinx.coroutines.flow.Flow%5Bkotlin.Boolean%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-form-properties/enabled.html">enabled</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormProperties%2Fenabled%2F%23kotlin.Boolean%2FPointingToDeclaration%2F%2C+dev.fritz2.components%2FFormProperties%2Fenabled%2F%23kotlinx.coroutines.flow.Flow%5Bkotlin.Boolean%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open override fun <a href="../-form-properties/enabled.html">enabled</a>(value: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace">open override fun <a href="../-form-properties/enabled.html">enabled</a>(value: <span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>&gt;)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="equals" id="%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../[root]/-select-field-component/-events-context/index.html#%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172">equals</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open operator fun <a href="../../[root]/-select-field-component/-events-context/index.html#%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172">equals</a>(other: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>?): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="hashCode" id="%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../[root]/-select-field-component/-events-context/index.html#%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172">hashCode</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open fun <a href="../../[root]/-select-field-component/-events-context/index.html#%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172">hashCode</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FinputField%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.binding.Store%5Bkotlin.String%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.InputFieldComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="inputField" id="%5Bdev.fritz2.components%2FFormControlComponent%2FinputField%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.binding.Store%5Bkotlin.String%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.InputFieldComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="input-field.html">inputField</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FinputField%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.binding.Store%5Bkotlin.String%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.InputFieldComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open fun <a href="input-field.html">inputField</a>(styling: <span data-unresolved-link="dev.fritz2.styling.params/BasicParams///PointingToDeclaration/">BasicParams</span>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {}, store: <span data-unresolved-link="dev.fritz2.binding/Store///PointingToDeclaration/">Store</span>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;? = null, baseClass: <span data-unresolved-link="dev.fritz2.styling/StyleClass///PointingToDeclaration/">StyleClass</span> = StyleClass.None, id: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null, prefix: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> = ControlNames.inputField, build: <a href="../-input-field-component/index.html">InputFieldComponent</a>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {})<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FownSize%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="ownSize" id="%5Bdev.fritz2.components%2FFormControlComponent%2FownSize%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="own-size.html">ownSize</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FownSize%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">fun <a href="own-size.html">ownSize</a>(): <span data-unresolved-link="dev.fritz2.styling.params/Style///PointingToDeclaration/">Style</span>&lt;<span data-unresolved-link="dev.fritz2.styling.params/BasicParams///PointingToDeclaration/">BasicParams</span>&gt;<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FradioGroup%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23kotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%23dev.fritz2.binding.Store%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.RadioGroupComponent%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="radioGroup" id="%5Bdev.fritz2.components%2FFormControlComponent%2FradioGroup%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23kotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%23dev.fritz2.binding.Store%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.RadioGroupComponent%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="radio-group.html">radioGroup</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FradioGroup%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23kotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%23dev.fritz2.binding.Store%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.RadioGroupComponent%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open fun &lt;<a href="radio-group.html">T</a>&gt; <a href="radio-group.html">radioGroup</a>(styling: <span data-unresolved-link="dev.fritz2.styling.params/BasicParams///PointingToDeclaration/">BasicParams</span>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {}, items: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="radio-group.html">T</a>&gt;, store: <span data-unresolved-link="dev.fritz2.binding/Store///PointingToDeclaration/">Store</span>&lt;<a href="radio-group.html">T</a>&gt;? = null, baseClass: <span data-unresolved-link="dev.fritz2.styling/StyleClass///PointingToDeclaration/">StyleClass</span> = StyleClass.None, id: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null, prefix: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> = ControlNames.radioGroup, build: <a href="../-radio-group-component/index.html">RadioGroupComponent</a>&lt;<a href="radio-group.html">T</a>&gt;.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {})<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2Frender%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%23kotlin.Function1%5Bdev.fritz2.styling.params.BoxParams%2Ckotlin.Unit%5D%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="render" id="%5Bdev.fritz2.components%2FFormControlComponent%2Frender%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%23kotlin.Function1%5Bdev.fritz2.styling.params.BoxParams%2Ckotlin.Unit%5D%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="render.html">render</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2Frender%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%23kotlin.Function1%5Bdev.fritz2.styling.params.BoxParams%2Ckotlin.Unit%5D%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open override fun <a href="render.html">render</a>(context: <span data-unresolved-link="dev.fritz2.dom.html/RenderContext///PointingToDeclaration/">RenderContext</span>, styling: <span data-unresolved-link="dev.fritz2.styling.params/BoxParams///PointingToDeclaration/">BoxParams</span>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>, baseClass: <span data-unresolved-link="dev.fritz2.styling/StyleClass///PointingToDeclaration/">StyleClass</span>, id: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?, prefix: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2Frender%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%23kotlin.Function1%5Bdev.fritz2.styling.params.BoxParams%2Ckotlin.Unit%5D%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="render" id="%5Bdev.fritz2.components%2FFormControlComponent%2Frender%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%23kotlin.Function1%5Bdev.fritz2.styling.params.BoxParams%2Ckotlin.Unit%5D%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a><div class="brief "><a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2Frender%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%23kotlin.Function1%5Bdev.fritz2.styling.params.BoxParams%2Ckotlin.Unit%5D%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="render" id="%5Bdev.fritz2.components%2FFormControlComponent%2Frender%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%23kotlin.Function1%5Bdev.fritz2.styling.params.BoxParams%2Ckotlin.Unit%5D%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>Central method that should do the actual rendering of a component.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FrenderHelperText%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="renderHelperText" id="%5Bdev.fritz2.components%2FFormControlComponent%2FrenderHelperText%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="render-helper-text.html">renderHelperText</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FrenderHelperText%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open fun <a href="render-helper-text.html">renderHelperText</a>(renderContext: <span data-unresolved-link="dev.fritz2.dom.html/RenderContext///PointingToDeclaration/">RenderContext</span>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FrenderValidationMessages%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="renderValidationMessages" id="%5Bdev.fritz2.components%2FFormControlComponent%2FrenderValidationMessages%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="render-validation-messages.html">renderValidationMessages</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FrenderValidationMessages%2F%23dev.fritz2.dom.Tag%5Borg.w3c.dom.HTMLElement%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open fun <a href="render-validation-messages.html">renderValidationMessages</a>(renderContext: <span data-unresolved-link="dev.fritz2.dom.html/RenderContext///PointingToDeclaration/">RenderContext</span>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FselectField%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23kotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%23dev.fritz2.binding.Store%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5BSelectFieldComponent%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="selectField" id="%5Bdev.fritz2.components%2FFormControlComponent%2FselectField%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23kotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%23dev.fritz2.binding.Store%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5BSelectFieldComponent%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="select-field.html">selectField</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FselectField%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23kotlin.collections.List%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%23dev.fritz2.binding.Store%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5BSelectFieldComponent%5BTypeParam%28bounds%3D%5Bkotlin.Any%3F%5D%29%5D%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open fun &lt;<a href="select-field.html">T</a>&gt; <a href="select-field.html">selectField</a>(styling: <span data-unresolved-link="dev.fritz2.styling.params/BasicParams///PointingToDeclaration/">BasicParams</span>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {}, items: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="select-field.html">T</a>&gt;, store: <span data-unresolved-link="dev.fritz2.binding/Store///PointingToDeclaration/">Store</span>&lt;<a href="select-field.html">T</a>&gt;? = null, baseClass: <span data-unresolved-link="dev.fritz2.styling/StyleClass///PointingToDeclaration/">StyleClass</span> = StyleClass.None, id: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null, prefix: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> = ControlNames.selectField, build: <a href="../../[root]/-select-field-component/index.html">SelectFieldComponent</a>&lt;<a href="select-field.html">T</a>&gt;.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {})<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2Fswitch%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.binding.Store%5Bkotlin.Boolean%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.SwitchComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="switch" id="%5Bdev.fritz2.components%2FFormControlComponent%2Fswitch%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.binding.Store%5Bkotlin.Boolean%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.SwitchComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="switch.html">switch</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2Fswitch%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.binding.Store%5Bkotlin.Boolean%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.SwitchComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open fun <a href="switch.html">switch</a>(styling: <span data-unresolved-link="dev.fritz2.styling.params/BasicParams///PointingToDeclaration/">BasicParams</span>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {}, store: <span data-unresolved-link="dev.fritz2.binding/Store///PointingToDeclaration/">Store</span>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>&gt;? = null, baseClass: <span data-unresolved-link="dev.fritz2.styling/StyleClass///PointingToDeclaration/">StyleClass</span> = StyleClass.None, id: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null, prefix: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> = ControlNames.switch, build: <a href="../-switch-component/index.html">SwitchComponent</a>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {})<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FtextArea%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.binding.Store%5Bkotlin.String%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.TextAreaComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="textArea" id="%5Bdev.fritz2.components%2FFormControlComponent%2FtextArea%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.binding.Store%5Bkotlin.String%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.TextAreaComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="text-area.html">textArea</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FtextArea%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.BasicParams%2Ckotlin.Unit%5D%23dev.fritz2.binding.Store%5Bkotlin.String%5D%3F%23dev.fritz2.styling.StyleClass%23kotlin.String%3F%23kotlin.String%23kotlin.Function1%5Bdev.fritz2.components.TextAreaComponent%2Ckotlin.Unit%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open fun <a href="text-area.html">textArea</a>(styling: <span data-unresolved-link="dev.fritz2.styling.params/BasicParams///PointingToDeclaration/">BasicParams</span>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {}, store: <span data-unresolved-link="dev.fritz2.binding/Store///PointingToDeclaration/">Store</span>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;? = null, baseClass: <span data-unresolved-link="dev.fritz2.styling/StyleClass///PointingToDeclaration/">StyleClass</span> = StyleClass.None, id: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>? = null, prefix: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> = ControlNames.textArea, build: <a href="../-text-area-component/index.html">TextAreaComponent</a>.() -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> = {})<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" anchor-label="toString" id="%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../[root]/-select-field-component/-events-context/index.html#%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172">toString</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open fun <a href="../../[root]/-select-field-component/-events-context/index.html#%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F-1994582172">toString</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2Fdisabled%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" anchor-label="disabled" id="%5Bdev.fritz2.components%2FFormControlComponent%2Fdisabled%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="disabled.html">disabled</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2Fdisabled%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">open override val <a href="disabled.html">disabled</a>: <a href="../-dynamic-component-property/index.html">DynamicComponentProperty</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a>&gt;<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FhelperText%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" anchor-label="helperText" id="%5Bdev.fritz2.components%2FFormControlComponent%2FhelperText%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="helper-text.html">helperText</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FhelperText%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">val <a href="helper-text.html">helperText</a>: <a href="../-component-property/index.html">ComponentProperty</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>?&gt;<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FhelperTextStyle%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" anchor-label="helperTextStyle" id="%5Bdev.fritz2.components%2FFormControlComponent%2FhelperTextStyle%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="helper-text-style.html">helperTextStyle</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FhelperTextStyle%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">val <a href="helper-text-style.html">helperTextStyle</a>: <a href="../-component-property/index.html">ComponentProperty</a>&lt;<span data-unresolved-link="dev.fritz2.styling.params/Style///PointingToDeclaration/">Style</span>&lt;<span data-unresolved-link="dev.fritz2.styling.params/BasicParams///PointingToDeclaration/">BasicParams</span>&gt;&gt;<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2Flabel%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" anchor-label="label" id="%5Bdev.fritz2.components%2FFormControlComponent%2Flabel%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="label.html">label</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2Flabel%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">val <a href="label.html">label</a>: <a href="../-component-property/index.html">ComponentProperty</a>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a>&gt;<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FlabelStyle%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" anchor-label="labelStyle" id="%5Bdev.fritz2.components%2FFormControlComponent%2FlabelStyle%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="label-style.html">labelStyle</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FlabelStyle%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">val <a href="label-style.html">labelStyle</a>: <a href="../-component-property/index.html">ComponentProperty</a>&lt;<span data-unresolved-link="dev.fritz2.styling.params/Style///PointingToDeclaration/">Style</span>&lt;<span data-unresolved-link="dev.fritz2.styling.params/BasicParams///PointingToDeclaration/">BasicParams</span>&gt;&gt;<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2Fsize%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" anchor-label="size" id="%5Bdev.fritz2.components%2FFormControlComponent%2Fsize%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="size.html">size</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2Fsize%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">val <a href="size.html">size</a>: <a href="../-component-property/index.html">ComponentProperty</a>&lt;<a href="-form-size-context/index.html">FormControlComponent.FormSizeContext</a>.() -&gt; <a href="-form-size-context/-form-size-specifier/index.html">FormControlComponent.FormSizeContext.FormSizeSpecifier</a>&gt;<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FvalidationMessage%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" anchor-label="validationMessage" id="%5Bdev.fritz2.components%2FFormControlComponent%2FvalidationMessage%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="validation-message.html">validationMessage</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FvalidationMessage%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">val <a href="validation-message.html">validationMessage</a>: <a href="../-component-property/index.html">ComponentProperty</a>&lt;() -&gt; <span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span>&lt;<a href="../../dev.fritz2.components.validation/-component-validation-message/index.html#%5Bdev.fritz2.components.validation%2FComponentValidationMessage%2F%2F%2FPointingToDeclaration%2F%5D%2FExtensions%2F-1994582172">ComponentValidationMessage</a>?&gt;?&gt;<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FvalidationMessageRendering%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" anchor-label="validationMessageRendering" id="%5Bdev.fritz2.components%2FFormControlComponent%2FvalidationMessageRendering%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="validation-message-rendering.html">validationMessageRendering</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FvalidationMessageRendering%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">val <a href="validation-message-rendering.html">validationMessageRendering</a>: <a href="../-component-property/index.html">ComponentProperty</a>&lt;<span data-unresolved-link="dev.fritz2.dom.html/RenderContext///PointingToDeclaration/">RenderContext</span>.(<a href="../../dev.fritz2.components.validation/-component-validation-message/index.html#%5Bdev.fritz2.components.validation%2FComponentValidationMessage%2F%2F%2FPointingToDeclaration%2F%5D%2FExtensions%2F-1994582172">ComponentValidationMessage</a>) -&gt; <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a>&gt;<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.components%2FFormControlComponent%2FvalidationMessages%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" anchor-label="validationMessages" id="%5Bdev.fritz2.components%2FFormControlComponent%2FvalidationMessages%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172" data-filterable-set=":components:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":components:dokkaHtml/jsMain" data-filterable-set=":components:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="validation-messages.html">validationMessages</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.components%2FFormControlComponent%2FvalidationMessages%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F-1994582172"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtml/jsMain"><div class="symbol monospace">val <a href="validation-messages.html">validationMessages</a>: <a href="../-component-property/index.html">ComponentProperty</a>&lt;() -&gt; <span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span>&lt;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a>&lt;<a href="../../dev.fritz2.components.validation/-component-validation-message/index.html#%5Bdev.fritz2.components.validation%2FComponentValidationMessage%2F%2F%2FPointingToDeclaration%2F%5D%2FExtensions%2F-1994582172">ComponentValidationMessage</a>&gt;&gt;?&gt;<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#container"><svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11.3337 9.66683H0.666992L6.00033 3.66683L11.3337 9.66683Z" fill="black"/>
+    <path d="M0.666992 0.333496H11.3337V1.66683H0.666992V0.333496Z" fill="black"/>
+</svg></a></span><span>© 2020 Copyright</span><span class="pull-right"><span>Sponsored and developed by dokka</span><a href="https://github.com/Kotlin/dokka"><span class="padded-icon"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0H2.3949L4.84076 2.44586L0 7.28662L0.713376 8L5.55414 3.15924L8 5.6051V0Z" fill="black"/>
+</svg></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

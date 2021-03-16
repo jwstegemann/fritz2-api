@@ -1,0 +1,423 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>FlexItemContext</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+    <link href="../../../styles/style.css" rel="Stylesheet">
+    <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+    <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+    <link href="../../../styles/main.css" rel="Stylesheet">
+    <script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+    <script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+    <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+    <script type="text/javascript" src="../../../scripts/main.js" async="async"></script>
+    <script>var pathToRoot = "../../../";</script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="leftColumn">
+        <div id="logo"></div>
+        <div id="paneSearch"></div>
+        <div id="sideMenu"></div>
+      </div>
+      <div id="main">
+        <div id="leftToggler"><span class="icon-toggler"></span></div>
+        <div id="searchBar"></div>
+        <script type="text/javascript" src="../../../scripts/pages.js"></script>
+        <script type="text/javascript" src="../../../scripts/main.js"></script>
+        <div id="content" pageIds="dev.fritz2.styling.params/FlexItemContext///PointingToDeclaration//390662677">
+          <div class="breadcrumbs"><a href="../../index.html">styling</a>/<a href="../index.html">dev.fritz2.styling.params</a>/<a href="index.html">FlexItemContext</a></div>
+          <div class="cover ">
+            <div class="filter-section" id="filter-section"><button class="platform-tag platform-selector js-like" data-active="" data-filter=":styling:dokkaHtml/jsMain">js</button></div>
+            <h1 class="cover"><span>Flex</span><wbr></wbr><span>Item</span><wbr></wbr><span>Context</span></h1>
+            <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace"><div class="block"><div class="block">@<span data-unresolved-link="kotlinx.coroutines/ExperimentalCoroutinesApi///PointingToDeclaration/">ExperimentalCoroutinesApi</span>()</div></div>class <a href="index.html">FlexItemContext</a>(styleParams: <a href="../-style-params/index.html">StyleParams</a>, selfAlignment: <a href="../-self-alignment/index.html">SelfAlignment</a>, target: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a>) : <a href="../-style-params/index.html">StyleParams</a>, <a href="../-self-alignment/index.html">SelfAlignment</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This context interface offers functions to style elements of a flex layout.</p><p class="paragraph">It does not configure the flex template / container itself. This should be done by <a href="../-flexbox/index.html">Flexbox</a> functions!</p><p class="paragraph">This interface offers all the inherited functions of <a href="../-self-alignment/index.html">SelfAlignment</a> that corresponds to the <a href="https://www.w3.org/TR/css-align-3/">CSS alignment module</a>.</p><p class="paragraph">This class offers functions to set the <a href="order.html">order</a> of appearance, the <a href="grow.html">growth</a>, the <a href="shrink.html">shrinking</a> and the initial <a href="basis.html">size</a>.</p><p class="paragraph">This enables the definition of a layout item like this:</p><div class="sample-container"><code class="" theme="idea"><pre>flex {<br>    order { 2 } // element will appear after those with _lower_ values, independently of the position within the<br>                // DOM-Node!<br>    grow { 1 } // factor of growth<br>    shrink { 1 } // factor of shrinking<br>    basis { &quot;10em&quot; } // width of the element<br>}</pre></code></div></div></div>
+          </div>
+          <div class="tabbedcontent">
+            <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Parameters">Parameters</button></div>
+            <div class="tabs-section-body">
+              <h2 class="">Parameters</h2>
+              <div data-togglable="Parameters">
+                <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">selfAlignment</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">common alignment functions for child elements</p></div></div></div></div></div><div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">styleParams</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">basic context scope interface</p></div></div></div></div></div><div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex">target</span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">the defined output <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a> to write the generated CSS into</p></div></div></div></div></div></div></div></div></div>
+              </div>
+              <h2 class="tabbedcontent">Constructors</h2>
+              <div class="table" data-togglable="Constructors"><a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FFlexItemContext%2F%23dev.fritz2.styling.params.StyleParams%23dev.fritz2.styling.params.SelfAlignment%23kotlin.text.StringBuilder%2FPointingToDeclaration%2F%5D%2FConstructors%2F390662677" anchor-label="FlexItemContext" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FFlexItemContext%2F%23dev.fritz2.styling.params.StyleParams%23dev.fritz2.styling.params.SelfAlignment%23kotlin.text.StringBuilder%2FPointingToDeclaration%2F%5D%2FConstructors%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue TabbedContent">
+                    <div class=""><span class="inline-flex"><a href="-flex-item-context.html">FlexItemContext</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FFlexItemContext%2F%23dev.fritz2.styling.params.StyleParams%23dev.fritz2.styling.params.SelfAlignment%23kotlin.text.StringBuilder%2FPointingToDeclaration%2F%5D%2FConstructors%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">fun <a href="-flex-item-context.html">FlexItemContext</a>(styleParams: <a href="../-style-params/index.html">StyleParams</a>, selfAlignment: <a href="../-self-alignment/index.html">SelfAlignment</a>, target: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="brief ">basic context scope interface</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Functions</h2>
+              <div class="table" data-togglable="Functions"><a data-name="%5Bdev.fritz2.styling.params%2FSelfAlignment%2FalignSelf%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.SelfAlignItemsValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="alignSelf" id="%5Bdev.fritz2.styling.params%2FSelfAlignment%2FalignSelf%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.SelfAlignItemsValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../-self-alignment/align-self.html">alignSelf</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.styling.params%2FSelfAlignment%2FalignSelf%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.SelfAlignItemsValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">open override fun <a href="../-self-alignment/align-self.html">alignSelf</a>(value: <a href="../-self-align-items-values/index.html">SelfAlignItemsValues</a>.() -&gt; <a href="../index.html#%5Bdev.fritz2.styling.params%2FSelfAlignItemProperty%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F390662677">SelfAlignItemProperty</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FSelfAlignment%2FalignSelf%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.SelfAlignItemsValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="alignSelf" id="%5Bdev.fritz2.styling.params%2FSelfAlignment%2FalignSelf%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.SelfAlignItemsValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a><div class="brief "><a data-name="%5Bdev.fritz2.styling.params%2FSelfAlignment%2FalignSelf%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.SelfAlignItemsValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="alignSelf" id="%5Bdev.fritz2.styling.params%2FSelfAlignment%2FalignSelf%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.SelfAlignItemsValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>This function sets the <a href="https://developer.mozilla.org/en/docs/Web/CSS/align-content">self-align</a> propertyExample call:<div class="sample-container"><code class="" theme="idea"><pre>self-align { flexStart }</pre></code></div></div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fbasis%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.FlexBasisValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="basis" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fbasis%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.FlexBasisValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="basis.html">basis</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fbasis%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.FlexBasisValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">fun <a href="basis.html">basis</a>(value: <a href="../-flex-basis-values/index.html">FlexBasisValues</a>.() -&gt; <a href="../index.html#%5Bdev.fritz2.styling.params%2FFlexBasisProperty%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F390662677">FlexBasisProperty</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fbasis%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.FlexBasisValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="basis" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fbasis%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.FlexBasisValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a><div class="brief "><a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fbasis%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.FlexBasisValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="basis" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fbasis%2F%23kotlin.Function1%5Bdev.fritz2.styling.params.FlexBasisValues%2Ckotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>This function sets the <a href="https://developer.mozilla.org/en/docs/Web/CSS/flex-basis">flex-basis</a> CSS property.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="equals" id="%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../dev.fritz2.styling.theme/-theme/-companion/index.html#%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677">equals</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">open operator fun <a href="../../dev.fritz2.styling.theme/-theme/-companion/index.html#%5Bkotlin%2FAny%2Fequals%2F%23kotlin.Any%3F%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677">equals</a>(other: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a>?): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fgrow%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="grow" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fgrow%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="grow.html">grow</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fgrow%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">fun <a href="grow.html">grow</a>(value: () -&gt; <a href="../../dev.fritz2.styling.theme/index.html#%5Bdev.fritz2.styling.theme%2FProperty%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F390662677">Property</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fgrow%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="grow" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fgrow%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a><div class="brief "><a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fgrow%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="grow" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fgrow%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>This function sets the <a href="https://developer.mozilla.org/en/docs/Web/CSS/flex-grow">flex-grow</a> CSS property.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="hashCode" id="%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../dev.fritz2.styling.theme/-theme/-companion/index.html#%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677">hashCode</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">open fun <a href="../../dev.fritz2.styling.theme/-theme/-companion/index.html#%5Bkotlin%2FAny%2FhashCode%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677">hashCode</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Forder%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="order" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Forder%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="order.html">order</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Forder%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">fun <a href="order.html">order</a>(value: () -&gt; <a href="../../dev.fritz2.styling.theme/index.html#%5Bdev.fritz2.styling.theme%2FProperty%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F390662677">Property</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Forder%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="order" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Forder%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a><div class="brief "><a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Forder%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="order" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Forder%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>This function sets the <a href="https://developer.mozilla.org/en/docs/Web/CSS/order">order</a> CSS property.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fshrink%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="shrink" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fshrink%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="shrink.html">shrink</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fshrink%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">fun <a href="shrink.html">shrink</a>(value: () -&gt; <a href="../../dev.fritz2.styling.theme/index.html#%5Bdev.fritz2.styling.theme%2FProperty%2F%2F%2FPointingToDeclaration%2F%5D%2FClasslikes%2F390662677">Property</a>)<span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fshrink%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="shrink" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fshrink%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a><div class="brief "><a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fshrink%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="shrink" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2Fshrink%2F%23kotlin.Function0%5Bkotlin.String%5D%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>This function sets the <a href="https://developer.mozilla.org/en/docs/Web/CSS/flex-shrink">flex-shrink</a> CSS property.</div></div>
+</div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" anchor-label="toString" id="%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="../../dev.fritz2.styling.theme/-theme/-companion/index.html#%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677">toString</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title"><div class="divergent-group" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain"><div class="with-platform-tags"><span class="pull-right"></span></div>
+
+  <div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">open fun <a href="../../dev.fritz2.styling.theme/-theme/-companion/index.html#%5Bkotlin%2FAny%2FtoString%2F%23%2FPointingToDeclaration%2F%5D%2FFunctions%2F390662677">toString</a>(): <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+</div>
+</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="">Properties</h2>
+              <div class="table" data-togglable="Properties"><a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FlgProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677" anchor-label="lgProperties" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FlgProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="lg-properties.html">lgProperties</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FlgProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">open override val <a href="lg-properties.html">lgProperties</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="brief ">collects the properties for large screens</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FmdProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677" anchor-label="mdProperties" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FmdProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="md-properties.html">mdProperties</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FmdProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">open override val <a href="md-properties.html">mdProperties</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="brief ">collects the properties for middle-sized screens</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FsmProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677" anchor-label="smProperties" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FsmProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="sm-properties.html">smProperties</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FsmProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">open override val <a href="sm-properties.html">smProperties</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="brief ">collects the properties for small screens</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<a data-name="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FxlProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677" anchor-label="xlProperties" id="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FxlProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677" data-filterable-set=":styling:dokkaHtml/jsMain"></a>
+                <div class="table-row" data-filterable-current=":styling:dokkaHtml/jsMain" data-filterable-set=":styling:dokkaHtml/jsMain">
+                  <div class="main-subrow keyValue ">
+                    <div class=""><span class="inline-flex"><a href="xl-properties.html">xlProperties</a><span class="anchor-wrapper"><span class="anchor-icon" pointing-to="%5Bdev.fritz2.styling.params%2FFlexItemContext%2FxlProperties%2F%23%2FPointingToDeclaration%2F%5D%2FProperties%2F390662677"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M21.2496 5.3C20.3496 4.5 19.2496 4 18.0496 4C16.8496 4 15.6496 4.5 14.8496 5.3L10.3496 9.8L11.7496 11.2L16.2496 6.7C17.2496 5.7 18.8496 5.7 19.8496 6.7C20.8496 7.7 20.8496 9.3 19.8496 10.3L15.3496 14.8L16.7496 16.2L21.2496 11.7C22.1496 10.8 22.5496 9.7 22.5496 8.5C22.5496 7.3 22.1496 6.2 21.2496 5.3Z"/>
+    <path d="M8.35 16.7998C7.35 17.7998 5.75 17.7998 4.75 16.7998C3.75 15.7998 3.75 14.1998 4.75 13.1998L9.25 8.6998L7.85 7.2998L3.35 11.7998C1.55 13.5998 1.55 16.3998 3.35 18.1998C4.25 19.0998 5.35 19.4998 6.55 19.4998C7.75 19.4998 8.85 19.0998 9.75 18.1998L14.25 13.6998L12.85 12.2998L8.35 16.7998Z"/>
+</svg></span>
+                          <div class="copy-popup-wrapper "><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                    <div>
+                      <div class="platform-tags ">
+                        <div class="platform-tag js-like">js</div>
+                      </div>
+                      <div class="title">
+                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtml/jsMain"><div class="symbol monospace">open override val <a href="xl-properties.html">xlProperties</a>: <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4H15V16H5V4ZM17 7H19V18V20H17H8V18H17V7Z" fill="black"/>
+                       </svg></span><div class="copy-popup-wrapper popup-to-left"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M18 9C18 14 14 18 9 18C4 18 0 14 0 9C0 4 4 0 9 0C14 0 18 4 18 9ZM14.2 6.2L12.8 4.8L7.5 10.1L5.3 7.8L3.8 9.2L7.5 13L14.2 6.2Z" fill="#4DBB5F"/>
+</svg><span>Content copied to clipboard</span></div></span></div><div class="brief ">collects the properties for extra-large screens</div></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#container"><svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M11.3337 9.66683H0.666992L6.00033 3.66683L11.3337 9.66683Z" fill="black"/>
+    <path d="M0.666992 0.333496H11.3337V1.66683H0.666992V0.333496Z" fill="black"/>
+</svg></a></span><span>© 2020 Copyright</span><span class="pull-right"><span>Sponsored and developed by dokka</span><a href="https://github.com/Kotlin/dokka"><span class="padded-icon"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8 0H2.3949L4.84076 2.44586L0 7.28662L0.713376 8L5.55414 3.15924L8 5.6051V0Z" fill="black"/>
+</svg></span></a></span></div>
+      </div>
+    </div>
+  </body>
+</html>
+

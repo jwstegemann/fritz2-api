@@ -1,0 +1,7 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+
+dev.fritz2.styling
+dev.fritz2.styling.params
+dev.fritz2.styling.theme
+

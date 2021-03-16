@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":components:dokkaHtml/commonMain": [], ":components:dokkaHtml/jsMain": [":components:dokkaHtml/commonMain"], ":components:dokkaHtml/jvmMain": [":components:dokkaHtml/commonMain"]}'

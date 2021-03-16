@@ -1,0 +1,39 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:////PointingToDeclaration/[root]/index.html
+$dokka.location://navLink/dev.fritz2.dom.Tag[org.w3c.dom.HTMLElement]#kotlin.Function1[dev.fritz2.styling.params.BasicParams,kotlin.Unit]#dev.fritz2.styling.StyleClass#kotlin.String?#kotlin.String#kotlin.Function1[NavLinkComponent,kotlin.Unit]/PointingToDeclaration/[root]/nav-link.html
+$dokka.location://navSection/dev.fritz2.dom.Tag[org.w3c.dom.HTMLElement]#kotlin.String#kotlin.Function1[dev.fritz2.styling.params.BasicParams,kotlin.Unit]#dev.fritz2.styling.StyleClass#kotlin.String?#kotlin.String/PointingToDeclaration/[root]/nav-section.html
+$dokka.location://selectField/dev.fritz2.dom.Tag[org.w3c.dom.HTMLElement]#kotlin.Function1[dev.fritz2.styling.params.BasicParams,kotlin.Unit]#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]#dev.fritz2.binding.Store[TypeParam(bounds=[kotlin.Any?])]?#dev.fritz2.styling.StyleClass#kotlin.String?#kotlin.String#kotlin.Function1[SelectFieldComponent[TypeParam(bounds=[kotlin.Any?])],kotlin.Unit]/PointingToDeclaration/[root]/select-field.html
+$dokka.location:/NavLinkComponent.Companion///PointingToDeclaration/[root]/-nav-link-component/-companion/index.html
+$dokka.location:/NavLinkComponent.Companion/activeStyle/#/PointingToDeclaration/[root]/-nav-link-component/-companion/active-style.html
+$dokka.location:/NavLinkComponent///PointingToDeclaration/[root]/-nav-link-component/index.html
+$dokka.location:/NavLinkComponent/NavLinkComponent/#/PointingToDeclaration/[root]/-nav-link-component/-nav-link-component.html
+$dokka.location:/NavLinkComponent/active/#/PointingToDeclaration/[root]/-nav-link-component/active.html
+$dokka.location:/NavLinkComponent/icon/#/PointingToDeclaration/[root]/-nav-link-component/icon.html
+$dokka.location:/NavLinkComponent/render/#dev.fritz2.dom.Tag[org.w3c.dom.HTMLElement]#kotlin.Function1[dev.fritz2.styling.params.BoxParams,kotlin.Unit]#dev.fritz2.styling.StyleClass#kotlin.String?#kotlin.String/PointingToDeclaration/[root]/-nav-link-component/render.html
+$dokka.location:/NavLinkComponent/text/#/PointingToDeclaration/[root]/-nav-link-component/text.html
+$dokka.location:/SelectFieldComponent.Companion///PointingToDeclaration/[root]/-select-field-component/-companion/index.html
+$dokka.location:/SelectFieldComponent.Companion/staticCss/#/PointingToDeclaration/[root]/-select-field-component/-companion/static-css.html
+$dokka.location:/SelectFieldComponent.EventsContext///PointingToDeclaration/[root]/-select-field-component/-events-context/index.html
+$dokka.location:/SelectFieldComponent.EventsContext/EventsContext/#kotlinx.coroutines.flow.Flow[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/[root]/-select-field-component/-events-context/-events-context.html
+$dokka.location:/SelectFieldComponent.EventsContext/selected/#/PointingToDeclaration/[root]/-select-field-component/-events-context/selected.html
+$dokka.location:/SelectFieldComponent///PointingToDeclaration/[root]/-select-field-component/index.html
+$dokka.location:/SelectFieldComponent/SelectFieldComponent/#kotlin.collections.List[TypeParam(bounds=[kotlin.Any?])]#dev.fritz2.binding.Store[TypeParam(bounds=[kotlin.Any?])]?/PointingToDeclaration/[root]/-select-field-component/-select-field-component.html
+$dokka.location:/SelectFieldComponent/basicSelectStyles/#/PointingToDeclaration/[root]/-select-field-component/basic-select-styles.html
+$dokka.location:/SelectFieldComponent/disabled/#/PointingToDeclaration/[root]/-select-field-component/disabled.html
+$dokka.location:/SelectFieldComponent/events/#/PointingToDeclaration/[root]/-select-field-component/events.html
+$dokka.location:/SelectFieldComponent/icon/#/PointingToDeclaration/[root]/-select-field-component/icon.html
+$dokka.location:/SelectFieldComponent/iconStyle/#/PointingToDeclaration/[root]/-select-field-component/icon-style.html
+$dokka.location:/SelectFieldComponent/iconWrapperStyle/#/PointingToDeclaration/[root]/-select-field-component/icon-wrapper-style.html
+$dokka.location:/SelectFieldComponent/label/#/PointingToDeclaration/[root]/-select-field-component/label.html
+$dokka.location:/SelectFieldComponent/placeholder/#/PointingToDeclaration/[root]/-select-field-component/placeholder.html
+$dokka.location:/SelectFieldComponent/readonly/#/PointingToDeclaration/[root]/-select-field-component/readonly.html
+$dokka.location:/SelectFieldComponent/render/#dev.fritz2.dom.Tag[org.w3c.dom.HTMLElement]#kotlin.Function1[dev.fritz2.styling.params.BoxParams,kotlin.Unit]#dev.fritz2.styling.StyleClass#kotlin.String?#kotlin.String/PointingToDeclaration/[root]/-select-field-component/render.html
+$dokka.location:/SelectFieldComponent/selectedItem/#/PointingToDeclaration/[root]/-select-field-component/selected-item.html
+$dokka.location:/SelectFieldComponent/severity/#/PointingToDeclaration/[root]/-select-field-component/severity.html
+$dokka.location:/SelectFieldComponent/size/#/PointingToDeclaration/[root]/-select-field-component/size.html
+$dokka.location:/SelectFieldComponent/variant/#/PointingToDeclaration/[root]/-select-field-component/variant.html
+dev.fritz2.components
+dev.fritz2.components.data
+dev.fritz2.components.validation
+

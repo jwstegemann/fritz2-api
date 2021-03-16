@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":lenses-annotation-processor:dokkaHtml/commonMain": [], ":lenses-annotation-processor:dokkaHtml/jsMain": [":lenses-annotation-processor:dokkaHtml/commonMain"], ":lenses-annotation-processor:dokkaHtml/jvmMain": [":lenses-annotation-processor:dokkaHtml/commonMain"]}'

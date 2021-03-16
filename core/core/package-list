@@ -1,0 +1,20 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:dev.fritz2.validation/Validator/isValid/#TypeParam(bounds=[kotlin.Any?])#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/dev.fritz2.validation/-validator/[jvm]is-valid.html
+dev.fritz2.binding
+dev.fritz2.dom
+dev.fritz2.dom.html
+dev.fritz2.history
+dev.fritz2.identification
+dev.fritz2.lenses
+dev.fritz2.remote
+dev.fritz2.repositories
+dev.fritz2.repositories.localstorage
+dev.fritz2.repositories.rest
+dev.fritz2.resource
+dev.fritz2.routing
+dev.fritz2.tracking
+dev.fritz2.utils
+dev.fritz2.validation
+dev.fritz2.webcomponents
+
