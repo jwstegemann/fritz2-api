@@ -1,0 +1,324 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>BackgroundContext</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>fritz2</span>            </a>    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="styling::dev.fritz2.styling.params/BackgroundContext///PointingToDeclaration//1101377817">
+  <div class="breadcrumbs"><a href="../../index.html">styling</a><span class="delimiter">/</span><a href="../index.html">dev.fritz2.styling.params</a><span class="delimiter">/</span><a href="index.html">BackgroundContext</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Background</span><wbr><span><span>Context</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">BackgroundContext</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">styleParams<span class="token operator">: </span><a href="../-style-params/index.html">StyleParams</a><span class="token punctuation">, </span></span><span class="parameter ">target<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a></span></span><span class="token punctuation">)</span> : <a href="../-style-params/index.html">StyleParams</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This <i>context class</i> enables the definition of <i>background</i> related styling facilities.</p><p class="paragraph">It provides topic oriented functions to set properties directly and in some cases offers functions to enter sub-contexts in order to specify related property values in a readable, grouped manner (for example <a href="positions.html">positions</a> or <a href="sizes.html">sizes</a>)</p><p class="paragraph">Have a look at the following example to get an impression of the capabilities this class offers:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">background { /* it == BackgroundContext.() -&gt; Unit */<br>    image { "https://via.placeholder.com/150/?text=Klein" }<br>    repeat { repeatX }<br>    positions { /* sub context */<br>           horizontal { center }<br>           vertical { center }<br>       }<br>    }</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Parameters">Parameters</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Parameters</h2>
+      <div data-togglable="Parameters">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>style</span><wbr><span><span>Params</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">basic context scope interface</p></div></div></div></div></div><div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>target</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">the defined output <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a> to write the generated CSS into</p></div></div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-1670982131%2FConstructors%2F1101377817" anchor-label="BackgroundContext" id="-1670982131%2FConstructors%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-background-context.html"><span>Background</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1670982131%2FConstructors%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-background-context.html"><span class="token function">BackgroundContext</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">styleParams<span class="token operator">: </span><a href="../-style-params/index.html">StyleParams</a><span class="token punctuation">, </span></span><span class="parameter ">target<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-1160605505%2FFunctions%2F1101377817" anchor-label="attachment" id="-1160605505%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="attachment.html"><span><span>attachment</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1160605505%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="attachment.html"><span class="token function">attachment</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-background-attachments/index.html">BackgroundAttachments</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../index.html#1426670824%2FClasslikes%2F1101377817">BackgroundAttachmentProperty</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function is used to set the <a href="https://developer.mozilla.org/en/docs/Web/CSS/background-attachment">background-attachment</a> property. Predefined values are offered by <a href="../-background-attachments/index.html">BackgroundAttachments</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1255889517%2FFunctions%2F1101377817" anchor-label="blendMode" id="1255889517%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="blend-mode.html"><span>blend</span><wbr><span><span>Mode</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1255889517%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="blend-mode.html"><span class="token function">blendMode</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-background-blend-modes/index.html">BackgroundBlendModes</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../index.html#-1602427623%2FClasslikes%2F1101377817">BackgroundBlendModeProperty</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function is used to set the <a href="https://developer.mozilla.org/en/docs/Web/CSS/background-blend-mode">background-blend-mode</a> property. Predefined values are offered by <a href="../-background-blend-modes/index.html">BackgroundBlendModes</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="514494857%2FFunctions%2F1101377817" anchor-label="clip" id="514494857%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="clip.html"><span><span>clip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="514494857%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="clip.html"><span class="token function">clip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-background-box-values/index.html">BackgroundBoxValues</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../index.html#859674754%2FClasslikes%2F1101377817">BackgroundBoxProperty</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function is used to set the <a href="https://developer.mozilla.org/en/docs/Web/CSS/background-clip">background-clip</a> property. Predefined values are offered by <a href="../-background-box-values/index.html">BackgroundBoxValues</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1597780232%2FFunctions%2F1101377817" anchor-label="color" id="-1597780232%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="color.html"><span><span>color</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1597780232%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="color.html"><span class="token function">color</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../../dev.fritz2.styling.theme/-colors/index.html">Colors</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../dev.fritz2.styling.theme/index.html#755881360%2FClasslikes%2F1101377817">Property</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function is used to set a color for the <a href="https://developer.mozilla.org/en/docs/Web/CSS/background-color">background-color</a> property.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2067344256%2FFunctions%2F1101377817" anchor-label="image" id="2067344256%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="image.html"><span><span>image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2067344256%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="image.html"><span class="token function">image</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../dev.fritz2.styling.theme/index.html#755881360%2FClasslikes%2F1101377817">Property</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function is used to set a <i>URL</i> for the <a href="https://developer.mozilla.org/en/docs/Web/CSS/background-image">background-image</a> property.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1946568748%2FFunctions%2F1101377817" anchor-label="noImage" id="-1946568748%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="no-image.html"><span>no</span><wbr><span><span>Image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1946568748%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="no-image.html"><span class="token function">noImage</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function is used to set the value for the <a href="https://developer.mozilla.org/en/docs/Web/CSS/background-image">background-image</a> property to <code class="lang-kotlin">`none`</code>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1014871199%2FFunctions%2F1101377817" anchor-label="origin" id="1014871199%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="origin.html"><span><span>origin</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1014871199%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="origin.html"><span class="token function">origin</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-background-box-values/index.html">BackgroundBoxValues</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../index.html#859674754%2FClasslikes%2F1101377817">BackgroundBoxProperty</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function is used to set the <a href="https://developer.mozilla.org/en/docs/Web/CSS/background-origin">background-origin</a> property. Predefined values are offered by <a href="../-background-box-values/index.html">BackgroundBoxValues</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1885274113%2FFunctions%2F1101377817" anchor-label="position" id="-1885274113%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="position.html"><span><span>position</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1885274113%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="position.html"><span class="token function">position</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-background-positions/index.html">BackgroundPositions</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../index.html#-1108654750%2FClasslikes%2F1101377817">BackgroundPositionProperty</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function is used to set the <a href="https://developer.mozilla.org/en/docs/Web/CSS/background-position">background-position</a> property. Predefined values are offered by <a href="../-background-positions/index.html">BackgroundPositions</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="867868749%2FFunctions%2F1101377817" anchor-label="positions" id="867868749%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="positions.html"><span><span>positions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="867868749%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="positions.html"><span class="token function">positions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-background-position-context/index.html">BackgroundPositionContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function opens a <i>sub scope</i> in order to set the two dimensions (horizontal and vertical) of the background position independently.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1014596929%2FFunctions%2F1101377817" anchor-label="repeat" id="-1014596929%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="repeat.html"><span><span>repeat</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1014596929%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="repeat.html"><span class="token function">repeat</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-background-repeats/index.html">BackgroundRepeats</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../index.html#1060577008%2FClasslikes%2F1101377817">BackgroundRepeatProperty</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function is used to set the <a href="https://developer.mozilla.org/en/docs/Web/CSS/background-repeat">background-repeat</a> property. Predefined values are offered by <a href="../-background-repeats/index.html">BackgroundRepeats</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="872765183%2FFunctions%2F1101377817" anchor-label="size" id="872765183%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="size.html"><span><span>size</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="872765183%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="size.html"><span class="token function">size</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-background-sizes/index.html">BackgroundSizes</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../index.html#1540643082%2FClasslikes%2F1101377817">BackgroundSizeProperty</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function is used to set the <a href="https://developer.mozilla.org/en/docs/Web/CSS/background-size">background-size</a> property. Predefined values are offered by <a href="../-background-sizes/index.html">BackgroundSizes</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1846178019%2FFunctions%2F1101377817" anchor-label="sizes" id="-1846178019%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="sizes.html"><span><span>sizes</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1846178019%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="sizes.html"><span class="token function">sizes</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-background-size-context/index.html">BackgroundSizeContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function opens a <i>sub scope</i> in order to set the two dimensions (horizontal and vertical) of the background size independently.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="1312049492%2FProperties%2F1101377817" anchor-label="lgProperties" id="1312049492%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-style-params/lg-properties.html">lgProperties</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1312049492%2FProperties%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><a data-name="1312049492%2FProperties%2F1101377817" anchor-label="lgProperties" id="1312049492%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-style-params/lg-properties.html">lgProperties</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1312049492%2FProperties%2F1101377817" anchor-label="lgProperties" id="1312049492%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><p class="paragraph">collects the properties for large screens</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="85881784%2FProperties%2F1101377817" anchor-label="mdProperties" id="85881784%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-style-params/md-properties.html">mdProperties</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="85881784%2FProperties%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><a data-name="85881784%2FProperties%2F1101377817" anchor-label="mdProperties" id="85881784%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-style-params/md-properties.html">mdProperties</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="85881784%2FProperties%2F1101377817" anchor-label="mdProperties" id="85881784%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><p class="paragraph">collects the properties for middle-sized screens</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1857657835%2FProperties%2F1101377817" anchor-label="smProperties" id="-1857657835%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-style-params/sm-properties.html">smProperties</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1857657835%2FProperties%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><a data-name="-1857657835%2FProperties%2F1101377817" anchor-label="smProperties" id="-1857657835%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-style-params/sm-properties.html">smProperties</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1857657835%2FProperties%2F1101377817" anchor-label="smProperties" id="-1857657835%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><p class="paragraph">collects the properties for small screens</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2135838011%2FProperties%2F1101377817" anchor-label="xlProperties" id="2135838011%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-style-params/xl-properties.html">xlProperties</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2135838011%2FProperties%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><a data-name="2135838011%2FProperties%2F1101377817" anchor-label="xlProperties" id="2135838011%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-style-params/xl-properties.html">xlProperties</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="2135838011%2FProperties%2F1101377817" anchor-label="xlProperties" id="2135838011%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><p class="paragraph">collects the properties for extra-large screens</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
+    </div>
+</div>
+
+</body></html>
+

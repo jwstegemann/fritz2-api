@@ -1,0 +1,249 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>BordersContext</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>fritz2</span>            </a>    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="styling::dev.fritz2.styling.params/BordersContext///PointingToDeclaration//1101377817">
+  <div class="breadcrumbs"><a href="../../index.html">styling</a><span class="delimiter">/</span><a href="../index.html">dev.fritz2.styling.params</a><span class="delimiter">/</span><a href="index.html">BordersContext</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Borders</span><wbr><span><span>Context</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><span data-unresolved-link="kotlinx.coroutines/ExperimentalCoroutinesApi///PointingToDeclaration/"><span class="token annotation">ExperimentalCoroutinesApi</span></span></div></div><span class="token keyword">class </span><a href="index.html">BordersContext</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>styleParams<span class="token operator">: </span><a href="../-style-params/index.html">StyleParams</a><span class="token punctuation">, </span></span><span class="parameter ">target<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a></span></span><span class="token punctuation">)</span> : <a href="../-style-params/index.html">StyleParams</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This <i>context class</i> acts as an <i>intermediate context</i> to style the four sides of a border independently.</p><p class="paragraph">It offers the four functions <a href="top.html">top</a>, <a href="right.html">right</a>, <a href="bottom.html">bottom</a> and <a href="left.html">left</a> to bring in the <a href="../-border-context/index.html">BorderContext</a> scope in order to set the properties for each side individually.</p><p class="paragraph">There are also two convenience functions <a href="horizontal.html">horizontal</a> and <a href="vertical.html">vertical</a> that enables the pairwise styling for the related horizontal or vertical sides.</p><p class="paragraph">For the final usage have a look at <a href="../-border-context/index.html">BorderContext</a>.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Parameters">Parameters</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Parameters</h2>
+      <div data-togglable="Parameters">
+        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted" data-togglable="Parameters"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div data-togglable="Parameters"><div class="table" data-togglable="Parameters"><div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span>style</span><wbr><span><span>Params</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">basic context scope interface</p></div></div></div></div></div><div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"><div class="main-subrow keyValue WithExtraAttributes"><div class=""><span class="inline-flex"><div><span><span>target</span></span></div></span></div><div><div class="title"><div data-togglable="Parameters"><p class="paragraph">the defined output <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a> to write the generated CSS into</p></div></div></div></div></div></div></div></div></div>
+      </div>
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-734753207%2FConstructors%2F1101377817" anchor-label="BordersContext" id="-734753207%2FConstructors%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-borders-context.html"><span>Borders</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-734753207%2FConstructors%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-borders-context.html"><span class="token function">BordersContext</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">styleParams<span class="token operator">: </span><a href="../-style-params/index.html">StyleParams</a><span class="token punctuation">, </span></span><span class="parameter ">target<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-2024151442%2FFunctions%2F1101377817" anchor-label="bottom" id="-2024151442%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="bottom.html"><span><span>bottom</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2024151442%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="bottom.html"><span class="token function">bottom</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-border-context/index.html">BorderContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function opens a context (<a href="../-border-context/index.html">BorderContext</a>) to specify the border styles for the <i>bottom</i> side of a block via the <code class="lang-kotlin">`border-bottom-{property}`</code> CSS properties.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1941076825%2FFunctions%2F1101377817" anchor-label="horizontal" id="-1941076825%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="horizontal.html"><span><span>horizontal</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1941076825%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="horizontal.html"><span class="token function">horizontal</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-border-context/index.html">BorderContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This is a <i>convenience</i> function that opens a context (<a href="../-border-context/index.html">BorderContext</a>) to specify the border styles for both horizontal sides of a block at once, that is the <i>top</i> and <i>bottom</i> side via <code class="lang-kotlin">`border-top-{property}`</code> and <code class="lang-kotlin">`border-bottom-{property}`</code> CSS properties.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1073433674%2FFunctions%2F1101377817" anchor-label="left" id="1073433674%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="left.html"><span><span>left</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1073433674%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="left.html"><span class="token function">left</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-border-context/index.html">BorderContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function opens a context (<a href="../-border-context/index.html">BorderContext</a>) to specify the border styles for the <i>left</i> side of a block via the <code class="lang-kotlin">`border-left-{property}`</code> CSS properties.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="901993559%2FFunctions%2F1101377817" anchor-label="right" id="901993559%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="right.html"><span><span>right</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="901993559%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="right.html"><span class="token function">right</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-border-context/index.html">BorderContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function opens a context (<a href="../-border-context/index.html">BorderContext</a>) to specify the border styles for the <i>right</i> side of a block via the <code class="lang-kotlin">`border-right-{property}`</code> CSS properties.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="712267984%2FFunctions%2F1101377817" anchor-label="top" id="712267984%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="top.html"><span><span>top</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="712267984%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="top.html"><span class="token function">top</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-border-context/index.html">BorderContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function opens a context (<a href="../-border-context/index.html">BorderContext</a>) to specify the border styles for the <i>top</i> side of a block via the <code class="lang-kotlin">`border-top-{property}`</code> CSS properties.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1397431673%2FFunctions%2F1101377817" anchor-label="vertical" id="1397431673%2FFunctions%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="vertical.html"><span><span>vertical</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1397431673%2FFunctions%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="vertical.html"><span class="token function">vertical</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../-border-context/index.html">BorderContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This is a <i>convenience</i> function that opens a context (<a href="../-border-context/index.html">BorderContext</a>) to specify the border styles for both vertical sides of a block at once, that is the <i>right</i> and <i>left</i> hand side via <code class="lang-kotlin">`border-left-{property}`</code> and <code class="lang-kotlin">`border-right-{property}`</code> CSS properties.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="1312049492%2FProperties%2F1101377817" anchor-label="lgProperties" id="1312049492%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-style-params/lg-properties.html">lgProperties</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1312049492%2FProperties%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><a data-name="1312049492%2FProperties%2F1101377817" anchor-label="lgProperties" id="1312049492%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-style-params/lg-properties.html">lgProperties</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1312049492%2FProperties%2F1101377817" anchor-label="lgProperties" id="1312049492%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><p class="paragraph">collects the properties for large screens</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="85881784%2FProperties%2F1101377817" anchor-label="mdProperties" id="85881784%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-style-params/md-properties.html">mdProperties</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="85881784%2FProperties%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><a data-name="85881784%2FProperties%2F1101377817" anchor-label="mdProperties" id="85881784%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-style-params/md-properties.html">mdProperties</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="85881784%2FProperties%2F1101377817" anchor-label="mdProperties" id="85881784%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><p class="paragraph">collects the properties for middle-sized screens</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1857657835%2FProperties%2F1101377817" anchor-label="smProperties" id="-1857657835%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-style-params/sm-properties.html">smProperties</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1857657835%2FProperties%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><a data-name="-1857657835%2FProperties%2F1101377817" anchor-label="smProperties" id="-1857657835%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-style-params/sm-properties.html">smProperties</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1857657835%2FProperties%2F1101377817" anchor-label="smProperties" id="-1857657835%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><p class="paragraph">collects the properties for small screens</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1202927082%2FProperties%2F1101377817" anchor-label="styleParams" id="1202927082%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="style-params.html">styleParams</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1202927082%2FProperties%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><a data-name="1202927082%2FProperties%2F1101377817" anchor-label="styleParams" id="1202927082%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="style-params.html">styleParams</a><span class="token operator">: </span><a href="../-style-params/index.html">StyleParams</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2135838011%2FProperties%2F1101377817" anchor-label="xlProperties" id="2135838011%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":styling:dokkaHtmlPartial/jsMain" data-filterable-set=":styling:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-style-params/xl-properties.html">xlProperties</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2135838011%2FProperties%2F1101377817"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":styling:dokkaHtmlPartial/jsMain"><a data-name="2135838011%2FProperties%2F1101377817" anchor-label="xlProperties" id="2135838011%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-style-params/xl-properties.html">xlProperties</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/-string-builder/index.html">StringBuilder</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="2135838011%2FProperties%2F1101377817" anchor-label="xlProperties" id="2135838011%2FProperties%2F1101377817" data-filterable-set=":styling:dokkaHtmlPartial/jsMain"></a><p class="paragraph">collects the properties for extra-large screens</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
+    </div>
+</div>
+
+</body></html>
+

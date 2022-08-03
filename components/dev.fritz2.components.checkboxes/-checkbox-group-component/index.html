@@ -1,0 +1,446 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>CheckboxGroupComponent</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>fritz2</span>            </a>    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+            <div class="filter-section" id="filter-section">
+                    <button class="platform-tag platform-selector js-like" data-active="" data-filter=":components:dokkaHtmlPartial/jsMain">js</button>
+            </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="components::dev.fritz2.components.checkboxes/CheckboxGroupComponent///PointingToDeclaration//1109352543">
+  <div class="breadcrumbs"><a href="../../index.html">components</a><span class="delimiter">/</span><a href="../index.html">dev.fritz2.components.checkboxes</a><span class="delimiter">/</span><a href="index.html">CheckboxGroupComponent</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Checkbox</span><wbr><span>Group</span><wbr><span><span>Component</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">CheckboxGroupComponent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">items<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">values<span class="token operator">: </span><a href="../../../core/dev.fritz2.binding/-store/index.html">Store</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span> : <a href="../../dev.fritz2.components.foundations/-component/index.html">Component</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../core/dev.fritz2.dom.html/-div/index.html">Div</a><span class="token operator">&gt; </span>, <a href="../../dev.fritz2.components.foundations/-input-form-properties/index.html">InputFormProperties</a>, <a href="../../dev.fritz2.components.foundations/-severity-properties/index.html">SeverityProperties</a>, <a href="../../dev.fritz2.components.foundations/-orientation-property/index.html">OrientationProperty</a>, <a href="../../dev.fritz2.components.foundations/-tooltip-properties/index.html">TooltipProperties</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">This class combines the <i>configuration</i> and the core styling of a checkbox group. The rendering itself is also done within the companion object.</p><p class="paragraph">In order to render a checkbox group use the <a href="../../dev.fritz2.components/checkbox-group.html">checkboxGroup</a> factory function!</p><p class="paragraph">This class offers the following <i>configuration</i> features:</p><ul><li><p class="paragraph">the items as a List</p></li><li><p class="paragraph">the preselected items via a Flow&gt;</p></li><li><p class="paragraph">the label(mapping) static or dynamic via a Flow or customized content see the examples below</p></li><li><p class="paragraph">some predefined styling variants (size)</p></li><li><p class="paragraph">the style of the items (checkbox)</p></li><li><p class="paragraph">the style checked state</p></li><li><p class="paragraph">the style of the label</p></li><li><p class="paragraph">the checked icon ( use our icon library of our theme)</p></li><li><p class="paragraph">choose the orientation of checkbox elements (vertical or horizontal)</p></li></ul><p class="paragraph">This can be done within a functional expression that is the last parameter of the factory function, called <code class="lang-kotlin">build</code>. It offers an initialized instance of this <a href="index.html">CheckboxGroupComponent</a> class as receiver, so every mutating method can be called for configuring the desired state for rendering the checkbox.</p><p class="paragraph">Example usage</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">// simple use case showing the core functionality<br>val options = listOf("A", "B", "C")<br>val myStore = storeOf&lt;List&lt;String&gt;&gt;(emptyList())<br>checkboxGroup(items = options, values = myStore) {<br>}<br><br>// one can handle the events and preselected item also manually if needed:<br>val options = listOf("A", "B", "C")<br>checkboxGroup(items = options) {<br>     selectedItems(options.skip(1)) // for selecting "B" and "C" or an empty list (default)<br>                                    // if nothing should be selected at all<br>     events {<br>         selected handledBy someStoreOfString<br>     }<br>}<br><br>// use case showing some styling options and a complex data type<br>val myPairs = listOf(<br>    (1 to "ffffff"),<br>    (2 to "rrrrrr"),<br>    (3 to "iiiiii"),<br>    (4 to "tttttt"),<br>    (5 to "zzzzzz"),<br>    (6 to "222222")<br>)<br>val myStore = storeOf&lt;List&lt;Pair&lt;Int,String&gt;&gt;(emptyList())<br>checkboxGroup(items = myPairs, values = myStore) {<br>     label { it.second } // adjust label representation to specific model characteristics<br>     size { large }<br>     checkedStyle {<br>          background { color {"green"} }<br>     }<br>}<br><br>// use custom layouts for the checkbox labels by specifying a label-renderer:<br>val options = listOf("A", "B", "C")<br>checkboxGroup(items = options) {<br>     labelRendering { item -&gt;<br>         span({<br>             fontFamily { mono }<br>             background {<br>                 color { primary.highlight }<br>             }<br>         }) {<br>             +item<br>         }<br>     }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="2048810034%2FConstructors%2F1109352543" anchor-label="CheckboxGroupComponent" id="2048810034%2FConstructors%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-checkbox-group-component.html"><span>Checkbox</span><wbr><span>Group</span><wbr><span><span>Component</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2048810034%2FConstructors%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt; </span><a href="-checkbox-group-component.html"><span class="token function">CheckboxGroupComponent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">items<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">values<span class="token operator">: </span><a href="../../../core/dev.fritz2.binding/-store/index.html">Store</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-1555393786%2FClasslikes%2F1109352543" anchor-label="Companion" id="-1555393786%2FClasslikes%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1555393786%2FClasslikes%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1604621948%2FClasslikes%2F1109352543" anchor-label="EventsContext" id="1604621948%2FClasslikes%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-events-context/index.html"><span>Events</span><wbr><span><span>Context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1604621948%2FClasslikes%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="-events-context/index.html">EventsContext</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-events-context/index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">element<span class="token operator">: </span><a href="../../../core/dev.fritz2.dom/-tag/index.html">Tag</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-element/index.html">HTMLElement</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>selected<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-events-context/index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="../../../core/dev.fritz2.dom/-event-context/index.html">EventContext</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-element/index.html">HTMLElement</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-690902386%2FFunctions%2F1109352543" anchor-label="enabled" id="-690902386%2FFunctions%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../dev.fritz2.components.foundations/-form-properties/enabled.html"><span><span>enabled</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-690902386%2FFunctions%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../dev.fritz2.components.foundations/-form-properties/enabled.html"><span class="token function">enabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../dev.fritz2.components.foundations/-form-properties/enabled.html"><span class="token function">enabled</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-677271219%2FFunctions%2F1109352543" anchor-label="render" id="-677271219%2FFunctions%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="render.html"><span><span>render</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-677271219%2FFunctions%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="render.html"><span class="token function">render</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;context<span class="token operator">: </span><a href="../../../core/dev.fritz2.dom.html/-render-context/index.html">RenderContext</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;styling<span class="token operator">: </span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-box-params/index.html">BoxParams</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;baseClass<span class="token operator">: </span><a href="../../../styling/dev.fritz2.styling/-style-class/index.html">StyleClass</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;prefix<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../../core/dev.fritz2.dom.html/-div/index.html">Div</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Central method that should do the actual rendering of a component.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="494157084%2FFunctions%2F1109352543" anchor-label="severity" id="494157084%2FFunctions%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../dev.fritz2.components.foundations/-severity-properties/severity.html"><span><span>severity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="494157084%2FFunctions%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../dev.fritz2.components.foundations/-severity-properties/severity.html"><span class="token function">severity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><span class="token keyword"></span><a href="../../dev.fritz2.components.foundations/-severity-properties/-severity-context/index.html">SeverityProperties.SeverityContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../../components/dev.fritz2.components.validation/-severity/index.html">Severity</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Property to manage the severity value of the component.</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-158953361%2FFunctions%2F1109352543" anchor-label="severityClassOf" id="-158953361%2FFunctions%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../dev.fritz2.components.foundations/-severity-properties/severity-class-of.html"><span>severity</span><wbr><span>Class</span><wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-158953361%2FFunctions%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../dev.fritz2.components.foundations/-severity-properties/severity-class-of.html"><span class="token function">severityClassOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">severityStyle<span class="token operator">: </span><a href="../../../styling/dev.fritz2.styling.theme/-severity-styles/index.html">SeverityStyles</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling/-style-class/index.html">StyleClass</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This function manages the task to map a value of the Severity enumeration to a corresponding style defined within the SeverityStyles interface. The severity itself is taken from the <a href="../../../components/dev.fritz2.components.checkboxes/-checkbox-group-component/severity.html">severity</a> property, so only the styling interface's implementation has to be injected:</p></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-743120505%2FFunctions%2F1109352543" anchor-label="tooltip" id="-743120505%2FFunctions%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../dev.fritz2.components.foundations/-tooltip-properties/tooltip.html"><span><span>tooltip</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-743120505%2FFunctions%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../dev.fritz2.components.foundations/-tooltip-properties/tooltip.html"><span class="token function">tooltip</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">vararg </span>text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">build<span class="token operator">: </span><span class="token keyword"></span><a href="../../dev.fritz2.components.tooltip/-tooltip-component/index.html">TooltipComponent</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="../../dev.fritz2.components.foundations/-tooltip-properties/tooltip.html"><span class="token function">tooltip</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;styling<span class="token operator">: </span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-basic-params/index.html">BasicParams</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;baseClass<span class="token operator">: </span><a href="../../../styling/dev.fritz2.styling/-style-class/index.html">StyleClass</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;prefix<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;build<span class="token operator">: </span><span class="token keyword"></span><a href="../../dev.fritz2.components.tooltip/-tooltip-component/index.html">TooltipComponent</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-1070110863%2FProperties%2F1109352543" anchor-label="checkedStyle" id="-1070110863%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="checked-style.html">checkedStyle</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1070110863%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-1070110863%2FProperties%2F1109352543" anchor-label="checkedStyle" id="-1070110863%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="checked-style.html">checkedStyle</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-component-property/index.html">ComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-style/index.html">Style</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-basic-params/index.html">BasicParams</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1452888566%2FProperties%2F1109352543" anchor-label="disabled" id="-1452888566%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../dev.fritz2.components.foundations/-form-properties/disabled.html">disabled</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1452888566%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-1452888566%2FProperties%2F1109352543" anchor-label="disabled" id="-1452888566%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../dev.fritz2.components.foundations/-form-properties/disabled.html">disabled</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-dynamic-component-property/index.html">DynamicComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1358721538%2FProperties%2F1109352543" anchor-label="events" id="1358721538%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="events.html">events</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1358721538%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="1358721538%2FProperties%2F1109352543" anchor-label="events" id="1358721538%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="events.html">events</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-component-property/index.html">ComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><span class="token keyword"></span><a href="-events-context/index.html">CheckboxGroupComponent.EventsContext</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-901391838%2FProperties%2F1109352543" anchor-label="icon" id="-901391838%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="icon.html">icon</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-901391838%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-901391838%2FProperties%2F1109352543" anchor-label="icon" id="-901391838%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="icon.html">icon</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-component-property/index.html">ComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.theme/-icons/index.html">Icons</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.theme/-icon-definition/index.html">IconDefinition</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2136383199%2FProperties%2F1109352543" anchor-label="itemStyle" id="-2136383199%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="item-style.html">itemStyle</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2136383199%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-2136383199%2FProperties%2F1109352543" anchor-label="itemStyle" id="-2136383199%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="item-style.html">itemStyle</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-component-property/index.html">ComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-style/index.html">Style</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-basic-params/index.html">BasicParams</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1070501451%2FProperties%2F1109352543" anchor-label="label" id="1070501451%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="label.html">label</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1070501451%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="1070501451%2FProperties%2F1109352543" anchor-label="label" id="1070501451%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="label.html">label</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-component-property/index.html">ComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="862815235%2FProperties%2F1109352543" anchor-label="labelRendering" id="862815235%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="label-rendering.html">labelRendering</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="862815235%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="862815235%2FProperties%2F1109352543" anchor-label="labelRendering" id="862815235%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="label-rendering.html">labelRendering</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-component-property/index.html">ComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><span class="token keyword"></span><a href="../../../core/dev.fritz2.dom.html/-render-context/index.html">RenderContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1176524418%2FProperties%2F1109352543" anchor-label="labelStyle" id="-1176524418%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="label-style.html">labelStyle</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1176524418%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-1176524418%2FProperties%2F1109352543" anchor-label="labelStyle" id="-1176524418%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="label-style.html">labelStyle</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-component-property/index.html">ComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-style/index.html">Style</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-basic-params/index.html">BasicParams</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2143236296%2FProperties%2F1109352543" anchor-label="orientation" id="-2143236296%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../dev.fritz2.components.foundations/-orientation-property/orientation.html">orientation</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2143236296%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-2143236296%2FProperties%2F1109352543" anchor-label="orientation" id="-2143236296%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../dev.fritz2.components.foundations/-orientation-property/orientation.html">orientation</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-component-property/index.html">ComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><span class="token keyword"></span><a href="../../dev.fritz2.components.foundations/-orientation-context/index.html">OrientationContext</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../dev.fritz2.components.foundations/-orientation/index.html">Orientation</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1774783756%2FProperties%2F1109352543" anchor-label="readonly" id="1774783756%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../dev.fritz2.components.foundations/-input-form-properties/readonly.html">readonly</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1774783756%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="1774783756%2FProperties%2F1109352543" anchor-label="readonly" id="1774783756%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../dev.fritz2.components.foundations/-input-form-properties/readonly.html">readonly</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-dynamic-component-property/index.html">DynamicComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-509086550%2FProperties%2F1109352543" anchor-label="renderTooltip" id="-509086550%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../dev.fritz2.components.foundations/-tooltip-properties/render-tooltip.html">renderTooltip</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-509086550%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-509086550%2FProperties%2F1109352543" anchor-label="renderTooltip" id="-509086550%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../dev.fritz2.components.foundations/-tooltip-properties/render-tooltip.html">renderTooltip</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-component-property/index.html">ComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><span class="token keyword"></span><a href="../../../core/dev.fritz2.dom/-tag/index.html">Tag</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/org.w3c.dom/-h-t-m-l-element/index.html">HTMLElement</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="624655994%2FProperties%2F1109352543" anchor-label="selectedItems" id="624655994%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="selected-items.html">selectedItems</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="624655994%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="624655994%2FProperties%2F1109352543" anchor-label="selectedItems" id="624655994%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="selected-items.html">selectedItems</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-dynamic-component-property/index.html">DynamicComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1009318686%2FProperties%2F1109352543" anchor-label="severity" id="-1009318686%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../../dev.fritz2.components.foundations/-severity-properties/severity.html">severity</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1009318686%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-1009318686%2FProperties%2F1109352543" anchor-label="severity" id="-1009318686%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../../dev.fritz2.components.foundations/-severity-properties/severity.html">severity</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-nullable-dynamic-component-property/index.html">NullableDynamicComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../components/dev.fritz2.components.validation/-severity/index.html">Severity</a><span class="token operator">?</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1914879898%2FProperties%2F1109352543" anchor-label="size" id="1914879898%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="size.html">size</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1914879898%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="1914879898%2FProperties%2F1109352543" anchor-label="size" id="1914879898%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="size.html">size</a><span class="token operator">: </span><a href="../../dev.fritz2.components.foundations/-component-property/index.html">ComponentProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.theme/-form-sizes-styles/index.html">FormSizesStyles</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-style/index.html">Style</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-basic-params/index.html">BasicParams</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
+    </div>
+</div>
+
+</body></html>
+

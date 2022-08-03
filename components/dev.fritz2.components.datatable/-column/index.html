@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>Column</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>fritz2</span>            </a>    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+            <div class="filter-section" id="filter-section">
+                    <button class="platform-tag platform-selector js-like" data-active="" data-filter=":components:dokkaHtmlPartial/jsMain">js</button>
+            </div>
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="components::dev.fritz2.components.datatable/Column///PointingToDeclaration//1109352543">
+  <div class="breadcrumbs"><a href="../../index.html">components</a><span class="delimiter">/</span><a href="../index.html">dev.fritz2.components.datatable</a><span class="delimiter">/</span><a href="index.html">Column</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Column</span></span></h1>
+    <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+      <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">Column</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>lens<span class="token operator">: </span><a href="../../../core/dev.fritz2.lenses/-lens/index.html">Lens</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>title<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>minWidth<span class="token operator">: </span><a href="../../../styling/dev.fritz2.styling.theme/-property/index.html">Property</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>maxWidth<span class="token operator">: </span><a href="../../../styling/dev.fritz2.styling.theme/-property/index.html">Property</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>hidden<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>position<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>sorting<span class="token operator">: </span><a href="../-sorting/index.html">Sorting</a><span class="token operator"> = </span>Sorting.NONE<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>sortBy<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparator/index.html">Comparator</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>styling<span class="token operator">: </span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-basic-params/index.html">BasicParams</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-indexed-value/index.html">IndexedValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-stateful-item/index.html">StatefulItem</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ _ -&gt; }<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>content<span class="token operator">: </span><span class="token keyword"></span><a href="../../../core/dev.fritz2.dom.html/-td/index.html">Td</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-indexed-value/index.html">IndexedValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-stateful-item/index.html">StatefulItem</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span>cellStore<span class="token operator">: </span><a href="../../../core/dev.fritz2.binding/-store/index.html">Store</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span><span class="token keyword"></span>rowStore<span class="token operator">: </span><a href="../../../core/dev.fritz2.binding/-sub-store/index.html">SubStore</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>headerStyling<span class="token operator">: </span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-basic-params/index.html">BasicParams</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>sorting<span class="token operator">: </span><a href="../-sorting/index.html">Sorting</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>headerContent<span class="token operator">: </span><span class="token keyword"></span><a href="../../../core/dev.fritz2.dom.html/-div/index.html">Div</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>column<span class="token operator">: </span><a href="index.html">Column</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Main class to define the representation of the data class <code class="lang-kotlin">`T`</code> of one table column. This class mainly is the result of the DSL configuration of the datatable.</p><p class="paragraph">Besides the main properties like the header title string or the <a href="../../../core/dev.fritz2.lenses/-lens/index.html">Lens</a> to grab the current <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a> representation of the row data during the rendering process, one can also specify the sorting algorithm to fit the specific type (like a Date for example) or the appearance of the cell styling and content or the header styling and content.</p></div>    </div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-203370333%2FConstructors%2F1109352543" anchor-label="Column" id="-203370333%2FConstructors%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-column.html"><span><span>Column</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-203370333%2FConstructors%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt; </span><a href="-column.html"><span class="token function">Column</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;id<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;lens<span class="token operator">: </span><a href="../../../core/dev.fritz2.lenses/-lens/index.html">Lens</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;title<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;minWidth<span class="token operator">: </span><a href="../../../styling/dev.fritz2.styling.theme/-property/index.html">Property</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;maxWidth<span class="token operator">: </span><a href="../../../styling/dev.fritz2.styling.theme/-property/index.html">Property</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;hidden<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;position<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;sorting<span class="token operator">: </span><a href="../-sorting/index.html">Sorting</a><span class="token operator"> = </span>Sorting.NONE<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;sortBy<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparator/index.html">Comparator</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;styling<span class="token operator">: </span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-basic-params/index.html">BasicParams</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-indexed-value/index.html">IndexedValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-stateful-item/index.html">StatefulItem</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{ _ -&gt; }<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;content<span class="token operator">: </span><span class="token keyword"></span><a href="../../../core/dev.fritz2.dom.html/-td/index.html">Td</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-indexed-value/index.html">IndexedValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-stateful-item/index.html">StatefulItem</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span>cellStore<span class="token operator">: </span><a href="../../../core/dev.fritz2.binding/-store/index.html">Store</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span><span class="token keyword"></span>rowStore<span class="token operator">: </span><a href="../../../core/dev.fritz2.binding/-sub-store/index.html">SubStore</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;headerStyling<span class="token operator">: </span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-basic-params/index.html">BasicParams</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>sorting<span class="token operator">: </span><a href="../-sorting/index.html">Sorting</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;headerContent<span class="token operator">: </span><span class="token keyword"></span><a href="../../../core/dev.fritz2.dom.html/-div/index.html">Div</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>column<span class="token operator">: </span><a href="index.html">Column</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="1549741920%2FProperties%2F1109352543" anchor-label="content" id="1549741920%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="content.html">content</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1549741920%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="1549741920%2FProperties%2F1109352543" anchor-label="content" id="1549741920%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="content.html">content</a><span class="token operator">: </span><span class="token keyword"></span><a href="../../../core/dev.fritz2.dom.html/-td/index.html">Td</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-indexed-value/index.html">IndexedValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-stateful-item/index.html">StatefulItem</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span>cellStore<span class="token operator">: </span><a href="../../../core/dev.fritz2.binding/-store/index.html">Store</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token punctuation">, </span><span class="token keyword"></span>rowStore<span class="token operator">: </span><a href="../../../core/dev.fritz2.binding/-sub-store/index.html">SubStore</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="208483597%2FProperties%2F1109352543" anchor-label="headerContent" id="208483597%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="header-content.html">headerContent</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="208483597%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="208483597%2FProperties%2F1109352543" anchor-label="headerContent" id="208483597%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="header-content.html">headerContent</a><span class="token operator">: </span><span class="token keyword"></span><a href="../../../core/dev.fritz2.dom.html/-div/index.html">Div</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>column<span class="token operator">: </span><a href="index.html">Column</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1612987640%2FProperties%2F1109352543" anchor-label="headerStyling" id="1612987640%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="header-styling.html">headerStyling</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1612987640%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="1612987640%2FProperties%2F1109352543" anchor-label="headerStyling" id="1612987640%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="header-styling.html">headerStyling</a><span class="token operator">: </span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-basic-params/index.html">BasicParams</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>sorting<span class="token operator">: </span><a href="../-sorting/index.html">Sorting</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1184642007%2FProperties%2F1109352543" anchor-label="hidden" id="1184642007%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="hidden.html">hidden</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1184642007%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="1184642007%2FProperties%2F1109352543" anchor-label="hidden" id="1184642007%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="hidden.html">hidden</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1562560634%2FProperties%2F1109352543" anchor-label="id" id="-1562560634%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="id.html">id</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1562560634%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-1562560634%2FProperties%2F1109352543" anchor-label="id" id="-1562560634%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="id.html">id</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1509795843%2FProperties%2F1109352543" anchor-label="lens" id="1509795843%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="lens.html">lens</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1509795843%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="1509795843%2FProperties%2F1109352543" anchor-label="lens" id="1509795843%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="lens.html">lens</a><span class="token operator">: </span><a href="../../../core/dev.fritz2.lenses/-lens/index.html">Lens</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-353184577%2FProperties%2F1109352543" anchor-label="maxWidth" id="-353184577%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="max-width.html">maxWidth</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-353184577%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-353184577%2FProperties%2F1109352543" anchor-label="maxWidth" id="-353184577%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="max-width.html">maxWidth</a><span class="token operator">: </span><a href="../../../styling/dev.fritz2.styling.theme/-property/index.html">Property</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1532821805%2FProperties%2F1109352543" anchor-label="minWidth" id="1532821805%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="min-width.html">minWidth</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1532821805%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="1532821805%2FProperties%2F1109352543" anchor-label="minWidth" id="1532821805%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="min-width.html">minWidth</a><span class="token operator">: </span><a href="../../../styling/dev.fritz2.styling.theme/-property/index.html">Property</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-507755464%2FProperties%2F1109352543" anchor-label="position" id="-507755464%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="position.html">position</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-507755464%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-507755464%2FProperties%2F1109352543" anchor-label="position" id="-507755464%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="position.html">position</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">0</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1101459124%2FProperties%2F1109352543" anchor-label="sortBy" id="-1101459124%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="sort-by.html">sortBy</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1101459124%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-1101459124%2FProperties%2F1109352543" anchor-label="sortBy" id="-1101459124%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="sort-by.html">sortBy</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparator/index.html">Comparator</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1924087627%2FProperties%2F1109352543" anchor-label="sorting" id="-1924087627%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="sorting.html">sorting</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1924087627%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-1924087627%2FProperties%2F1109352543" anchor-label="sorting" id="-1924087627%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="sorting.html">sorting</a><span class="token operator">: </span><a href="../-sorting/index.html">Sorting</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1340721333%2FProperties%2F1109352543" anchor-label="styling" id="-1340721333%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="styling.html">styling</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1340721333%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-1340721333%2FProperties%2F1109352543" anchor-label="styling" id="-1340721333%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="styling.html">styling</a><span class="token operator">: </span><span class="token keyword"></span><a href="../../../styling/dev.fritz2.styling.params/-basic-params/index.html">BasicParams</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token keyword"></span>value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-indexed-value/index.html">IndexedValue</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../-stateful-item/index.html">StatefulItem</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-410805919%2FProperties%2F1109352543" anchor-label="title" id="-410805919%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a>
+        <div class="table-row" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="title.html">title</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-410805919%2FProperties%2F1109352543"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted  with-platform-tabs" data-platform-hinted="data-platform-hinted" data-togglable="Properties">
+                  <div class="platform-bookmarks-row" data-toggle-list="data-toggle-list"><button class="platform-bookmark js-like" data-filterable-current=":components:dokkaHtmlPartial/jsMain" data-filterable-set=":components:dokkaHtmlPartial/jsMain" data-active="" data-toggle=":components:dokkaHtmlPartial/jsMain">js</button></div>
+<div class="content sourceset-depenent-content" data-active="" data-togglable=":components:dokkaHtmlPartial/jsMain"><a data-name="-410805919%2FProperties%2F1109352543" anchor-label="title" id="-410805919%2FProperties%2F1109352543" data-filterable-set=":components:dokkaHtmlPartial/jsMain"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="title.html">title</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div>                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
+    </div>
+</div>
+
+</body></html>
+
